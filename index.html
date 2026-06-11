@@ -59,10 +59,10 @@
                                 <div class="w-10 sm:w-12 bg-indigo-500 rounded-t shadow-md" style="height: 64.8px;"></div>
                                 <span class="text-xs font-bold text-slate-700 mt-1.5">T4</span>
                             </div>
-                            <div class="flex flex-col items-center flex-1 opacity-40">
-                                <span class="text-[10px] font-mono text-slate-400 mb-1">Chờ số</span>
-                                <div class="w-10 sm:w-12 bg-slate-300 rounded-t border border-dashed border-slate-400" style="height: 4px;"></div>
-                                <span class="text-xs text-slate-400 mt-1.5">T5</span>
+                            <div class="flex flex-col items-center flex-1">
+                                <span class="text-[10px] font-mono font-bold text-purple-700 mb-1">54.1M</span>
+                                <div class="w-10 sm:w-12 bg-purple-500 rounded-t shadow-md" style="height: 54.1px;"></div>
+                                <span class="text-xs font-bold text-slate-700 mt-1.5">T5</span>
                             </div>
                         </div>
                     </div>
@@ -92,9 +92,13 @@
                                     <td class="px-3 py-2 font-bold text-slate-900 flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-indigo-500"></span>Tháng 4</td>
                                     <td class="px-3 py-2 text-right font-mono font-bold text-indigo-700">64.873.546</td>
                                 </tr>
-                                <tr class="text-slate-400 bg-slate-50/50">
-                                    <td class="px-3 py-1.5 flex items-center gap-1.5 italic"><span class="w-2 h-2 rounded-full bg-slate-300"></span>Tháng 5</td>
-                                    <td class="px-3 py-1.5 text-right text-xs italic">Chưa cập nhật</td>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="px-3 py-2 font-bold text-slate-900 flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-purple-500"></span>Tháng 5</td>
+                                    <td class="px-3 py-2 text-right font-mono font-bold text-purple-700">54.159.355</td>
+                                </tr>
+                                <tr class="bg-slate-100 font-bold border-t border-slate-300">
+                                    <td class="px-3 py-2.5 text-slate-900 uppercase">Tổng Các Tháng</td>
+                                    <td class="px-3 py-2.5 text-right font-mono text-red-700 text-sm">375.359.140</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -104,23 +108,79 @@
 
             <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
                 <div class="px-4 py-2 bg-slate-800 border-b border-slate-200">
-                    <h3 class="font-bold text-white text-xs uppercase tracking-wider">👥 BẢNG SO SÁNH TIỀN THƯỞNG THỰC NHẬN CỦA TỪNG NHÂN SỰ</h3>
+                    <h3 class="font-bold text-white text-xs uppercase tracking-wider">📋 BẢNG TỔNG HỢP BONUS TỪNG THÁNG CỦA CÁ NHÂN VÀ CỘT TỔNG</h3>
                 </div>
                 <div class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse min-w-[700px]">
+                    <table class="w-full text-left border-collapse min-w-[800px]">
                         <thead>
-                            <tr class="bg-slate-100 text-[10px] font-bold text-slate-600 uppercase border-b border-slate-200 text-center">
-                                <th class="px-3 py-2.5 text-left w-1/4">Họ và Tên</th>
-                                <th class="px-2 py-2.5">Tháng 1</th>
-                                <th class="px-2 py-2.5">Tháng 2</th>
-                                <th class="px-2 py-2.5">Tháng 3</th>
-                                <th class="px-2 py-2.5">Tháng 4</th>
-                                <th class="px-2 py-2.5 text-slate-400">Tháng 5</th>
-                                <th class="px-3 py-2.5 bg-blue-50 text-blue-950 font-black text-xs">Tổng Tất Cả Tháng</th>
+                            <tr class="bg-slate-100 text-slate-700 font-bold text-[10px] uppercase border-b border-slate-200 text-center">
+                                <th class="px-3 py-2.5 text-left w-[20%] border-r border-slate-200">Họ và Tên</th>
+                                <th class="px-2 py-2.5 border-r border-slate-200 w-[12%] text-blue-900 bg-blue-50/50">Tháng 1</th>
+                                <th class="px-2 py-2.5 border-r border-slate-200 w-[12%] text-emerald-900 bg-emerald-50/50">Tháng 2</th>
+                                <th class="px-2 py-2.5 border-r border-slate-200 w-[12%] text-amber-900 bg-amber-50/50">Tháng 3</th>
+                                <th class="px-2 py-2.5 border-r border-slate-200 w-[12%] text-indigo-900 bg-indigo-50/50">Tháng 4</th>
+                                <th class="px-2 py-2.5 border-r border-slate-200 w-[12%] text-purple-900 bg-purple-50/50">Tháng 5</th>
+                                <th class="px-3 py-2.5 text-right w-[20%] bg-amber-100 text-amber-950 font-black">Tổng Các Tháng</th>
                             </tr>
                         </thead>
-                        <tbody id="compare-staff-body" class="text-xs divide-y divide-slate-200 font-medium">
-                            </tbody>
+                        <tbody class="text-xs divide-y divide-slate-200 font-medium">
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-3 py-2.5 font-bold text-slate-900 border-r border-slate-200 truncate">1. Nguyễn Minh Thanh</td>
+                                <td id="tab1-p0-t1" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p0-t2" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p0-t3" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p0-t4" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p0-t5" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p0-total" class="px-3 py-2.5 text-right font-mono bg-amber-50 font-bold text-blue-950">0</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-3 py-2.5 font-bold text-slate-900 border-r border-slate-200 truncate">2. Đoàn Hiền</td>
+                                <td id="tab1-p1-t1" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p1-t2" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p1-t3" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p1-t4" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p1-t5" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p1-total" class="px-3 py-2.5 text-right font-mono bg-amber-50 font-bold text-blue-950">0</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-3 py-2.5 font-bold text-slate-900 border-r border-slate-200 truncate">3. Võ Thị Nhất</td>
+                                <td id="tab1-p2-t1" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p2-t2" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p2-t3" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p2-t4" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p2-t5" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p2-total" class="px-3 py-2.5 text-right font-mono bg-amber-50 font-bold text-blue-950">0</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-3 py-2.5 font-bold text-slate-900 border-r border-slate-200 truncate">4. Võ Thị Nhanh</td>
+                                <td id="tab1-p3-t1" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p3-t2" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p3-t3" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p3-t4" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p3-t5" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p3-total" class="px-3 py-2.5 text-right font-mono bg-amber-50 font-bold text-blue-950">0</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-3 py-2.5 font-bold text-slate-900 border-r border-slate-200 truncate">5. Nguyễn Lê Tiểu Quyên</td>
+                                <td id="tab1-p4-t1" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p4-t2" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p4-t3" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p4-t4" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p4-t5" class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-slate-800">0</td>
+                                <td id="tab1-p4-total" class="px-3 py-2.5 text-right font-mono bg-amber-50 font-bold text-blue-950">0</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="bg-slate-100 font-black text-slate-900 text-center border-t border-slate-300">
+                                <td class="px-3 py-2.5 text-left border-r border-slate-200 uppercase tracking-tight text-[11px]">Tổng Quỹ Tháng</td>
+                                <td class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-blue-700">100.663.665</td>
+                                <td class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-emerald-700">75.226.774</td>
+                                <td class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-amber-700">80.435.800</td>
+                                <td class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-indigo-700">64.873.546</td>
+                                <td class="px-2 py-2.5 text-right font-mono border-r border-slate-200 text-purple-700">54.159.355</td>
+                                <td class="px-3 py-2.5 text-right font-mono bg-yellow-100 text-red-700 text-sm">375.359.140</td>
+                            </tr>
+                        </tfoot>
                     </table>
                 </div>
             </div>
@@ -134,7 +194,7 @@
                     <option value="2">Tháng 2</option>
                     <option value="3">Tháng 3</option>
                     <option value="4">Tháng 4</option>
-                    <option value="5">Tháng 5 (Trống)</option>
+                    <option value="5">Tháng 5</option>
                 </select>
             </div>
 
@@ -175,147 +235,156 @@
             </div>
         </div>
 
-        <div id="tab-share-content" class="hidden space-y-3 max-w-5xl mx-auto">
-            
+        <div id="tab-share-content" class="hidden space-y-3 max-w-6xl mx-auto">
             <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 text-blue-900 flex justify-between items-center shadow-sm">
                 <div>
                     <p class="font-bold text-xs uppercase tracking-tight">🧮 BẢNG TÍNH PHÂN CHIA TỶ LỆ THƯỞNG LINH HOẠT</p>
-                    <p class="text-[11px] text-blue-700 mt-0.5">Em có thể **thay đổi trực tiếp số %** của từng người trong các ô dưới đây. Số tiền ở cả Tab 3 và Tab 1 sẽ tự động tính lại ngay lập tức.</p>
+                    <p class="text-[11px] text-blue-700 mt-0.5">Bạn có thể thay đổi trực tiếp số % của từng người trong các ô dưới đây. Số tiền sẽ tự động tính lại ngay lập tức.</p>
                 </div>
                 <span class="text-[11px] bg-blue-600 text-white font-bold px-2 py-1 rounded">Mặc định: 20%</span>
             </div>
 
             <div class="bg-white rounded border border-slate-200 overflow-hidden shadow-sm">
                 <div class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse min-w-[850px]">
+                    <table class="w-full text-left border-collapse min-w-[1000px] table-fixed">
                         <thead>
                             <tr class="bg-slate-800 text-white text-[10px] font-bold uppercase tracking-wider text-center">
-                                <th class="px-3 py-3 text-left w-1/5 border-r border-slate-700">Nhân sự nhận thưởng</th>
-                                <th class="px-2 py-2 border-r border-slate-700 bg-blue-950" colspan="2">Tháng 1 (100,663,665)</th>
-                                <th class="px-2 py-2 border-r border-slate-700 bg-emerald-950" colspan="2">Tháng 2 (75,226,774)</th>
-                                <th class="px-2 py-2 border-r border-slate-700 bg-amber-950" colspan="2">Tháng 3 (80,435,800)</th>
-                                <th class="px-2 py-2 border-r border-slate-700 bg-indigo-950" colspan="2">Tháng 4 (64,873,546)</th>
-                                <th class="px-2 py-2 bg-slate-900 text-slate-400" colspan="2">Tháng 5 (Chờ số)</th>
+                                <th class="px-3 py-3 text-left w-[16%] border-r border-slate-700">Nhân sự nhận thưởng</th>
+                                <th class="px-2 py-2 border-r border-slate-700 bg-blue-950 w-[16%]" colspan="2">Tháng 1 (100,663,665)</th>
+                                <th class="px-2 py-2 border-r border-slate-700 bg-emerald-950 w-[16%]" colspan="2">Tháng 2 (75,226,774)</th>
+                                <th class="px-2 py-2 border-r border-slate-700 bg-amber-950 w-[16%]" colspan="2">Tháng 3 (80,435,800)</th>
+                                <th class="px-2 py-2 border-r border-slate-700 bg-indigo-950 w-[16%]" colspan="2">Tháng 4 (64,873,546)</th>
+                                <th class="px-2 py-2 border-r border-slate-700 bg-purple-950 w-[20%]" colspan="2">Tháng 5 (54,159,355)</th>
                             </tr>
                             <tr class="bg-slate-100 text-slate-700 font-bold text-[9px] uppercase border-b border-slate-200 text-center">
                                 <th class="px-3 py-1.5 text-left border-r border-slate-200">Họ và Tên</th>
-                                <th class="px-1 py-1 w-14 border-r border-slate-200 bg-blue-50">Tỷ lệ</th>
+                                <th class="px-1 py-1 w-12 border-r border-slate-200 bg-blue-50">Tỷ lệ</th>
                                 <th class="px-2 py-1 border-r border-slate-200 bg-blue-50/30">Thành tiền</th>
-                                <th class="px-1 py-1 w-14 border-r border-slate-200 bg-emerald-50">Tỷ lệ</th>
+                                <th class="px-1 py-1 w-12 border-r border-slate-200 bg-emerald-50">Tỷ lệ</th>
                                 <th class="px-2 py-1 border-r border-slate-200 bg-emerald-50/30">Thành tiền</th>
-                                <th class="px-1 py-1 w-14 border-r border-slate-200 bg-amber-50">Tỷ lệ</th>
+                                <th class="px-1 py-1 w-12 border-r border-slate-200 bg-amber-50">Tỷ lệ</th>
                                 <th class="px-2 py-1 border-r border-slate-200 bg-amber-50/30">Thành tiền</th>
-                                <th class="px-1 py-1 w-14 border-r border-slate-200 bg-indigo-50">Tỷ lệ</th>
+                                <th class="px-1 py-1 w-12 border-r border-slate-200 bg-indigo-50">Tỷ lệ</th>
                                 <th class="px-2 py-1 border-r border-slate-200 bg-indigo-50/30">Thành tiền</th>
-                                <th class="px-1 py-1 w-14 border-r border-slate-200 bg-slate-50">Tỷ lệ</th>
-                                <th class="px-2 py-1 bg-slate-50/30">Thành tiền</th>
+                                <th class="px-1 py-1 w-12 border-r border-slate-200 bg-purple-50">Tỷ lệ</th>
+                                <th class="px-2 py-1 border-r border-slate-200 bg-purple-50/30">Thành tiền</th>
                             </tr>
                         </thead>
                         <tbody class="text-xs divide-y divide-slate-200 font-medium">
-                            <tr class="hover:bg-slate-50 staff-row" data-name="Nguyễn Minh Thanh">
-                                <td class="px-3 py-2 font-bold text-slate-900 border-r border-slate-200">1. Nguyễn Minh Thanh</td>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-3 py-2 font-bold text-slate-900 border-r border-slate-200 truncate">1. Nguyễn Minh Thanh</td>
                                 <td class="p-1 border-r border-slate-200 bg-blue-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-blue-700 focus:outline-none focus:border-blue-600 p-0.5 input-t1"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-blue-700 focus:outline-none p-0.5 input-t1"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t1">0</td>
                                 <td class="p-1 border-r border-slate-200 bg-emerald-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-emerald-700 focus:outline-none focus:border-emerald-600 p-0.5 input-t2"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-emerald-700 focus:outline-none p-0.5 input-t2"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t2">0</td>
                                 <td class="p-1 border-r border-slate-200 bg-amber-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-amber-700 focus:outline-none focus:border-amber-600 p-0.5 input-t3"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-amber-700 focus:outline-none p-0.5 input-t3"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t3">0</td>
                                 <td class="p-1 border-r border-slate-200 bg-indigo-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-indigo-700 focus:outline-none focus:border-indigo-600 p-0.5 input-t4"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-indigo-700 focus:outline-none p-0.5 input-t4"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t4">0</td>
-                                <td class="p-1 border-r border-slate-200 bg-slate-50 text-center text-slate-400">0%</td>
-                                <td class="px-2 py-2 text-right font-mono text-slate-400 italic bg-slate-50/50">-</td>
+                                <td class="p-1 border-r border-slate-200 bg-purple-50/30 text-center">
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-purple-700 focus:outline-none p-0.5 input-t5"> %
+                                </td>
+                                <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t5">0</td>
                             </tr>
-                            <tr class="hover:bg-slate-50 staff-row" data-name="Đoàn Hiền">
-                                <td class="px-3 py-2 font-bold text-slate-900 border-r border-slate-200">2. Đoàn Hiền</td>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-3 py-2 font-bold text-slate-900 border-r border-slate-200 truncate">2. Đoàn Hiền</td>
                                 <td class="p-1 border-r border-slate-200 bg-blue-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-blue-700 focus:outline-none focus:border-blue-600 p-0.5 input-t1"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-blue-700 focus:outline-none p-0.5 input-t1"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t1">0</td>
                                 <td class="p-1 border-r border-slate-200 bg-emerald-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-emerald-700 focus:outline-none focus:border-emerald-600 p-0.5 input-t2"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-emerald-700 focus:outline-none p-0.5 input-t2"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t2">0</td>
                                 <td class="p-1 border-r border-slate-200 bg-amber-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-amber-700 focus:outline-none focus:border-amber-600 p-0.5 input-t3"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-amber-700 focus:outline-none p-0.5 input-t3"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t3">0</td>
                                 <td class="p-1 border-r border-slate-200 bg-indigo-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-indigo-700 focus:outline-none focus:border-indigo-600 p-0.5 input-t4"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-indigo-700 focus:outline-none p-0.5 input-t4"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t4">0</td>
-                                <td class="p-1 border-r border-slate-200 bg-slate-50 text-center text-slate-400">0%</td>
-                                <td class="px-2 py-2 text-right font-mono text-slate-400 italic bg-slate-50/50">-</td>
+                                <td class="p-1 border-r border-slate-200 bg-purple-50/30 text-center">
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-purple-700 focus:outline-none p-0.5 input-t5"> %
+                                </td>
+                                <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t5">0</td>
                             </tr>
-                            <tr class="hover:bg-slate-50 staff-row" data-name="Võ Thị Nhất">
-                                <td class="px-3 py-2 font-bold text-slate-900 border-r border-slate-200">3. Võ Thị Nhất</td>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-3 py-2 font-bold text-slate-900 border-r border-slate-200 truncate">3. Võ Thị Nhất</td>
                                 <td class="p-1 border-r border-slate-200 bg-blue-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-blue-700 focus:outline-none focus:border-blue-600 p-0.5 input-t1"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-blue-700 focus:outline-none p-0.5 input-t1"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t1">0</td>
                                 <td class="p-1 border-r border-slate-200 bg-emerald-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-emerald-700 focus:outline-none focus:border-emerald-600 p-0.5 input-t2"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-emerald-700 focus:outline-none p-0.5 input-t2"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t2">0</td>
                                 <td class="p-1 border-r border-slate-200 bg-amber-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-amber-700 focus:outline-none focus:border-amber-600 p-0.5 input-t3"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-amber-700 focus:outline-none p-0.5 input-t3"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t3">0</td>
                                 <td class="p-1 border-r border-slate-200 bg-indigo-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-indigo-700 focus:outline-none focus:border-indigo-600 p-0.5 input-t4"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-indigo-700 focus:outline-none p-0.5 input-t4"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t4">0</td>
-                                <td class="p-1 border-r border-slate-200 bg-slate-50 text-center text-slate-400">0%</td>
-                                <td class="px-2 py-2 text-right font-mono text-slate-400 italic bg-slate-50/50">-</td>
+                                <td class="p-1 border-r border-slate-200 bg-purple-50/30 text-center">
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-purple-700 focus:outline-none p-0.5 input-t5"> %
+                                </td>
+                                <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t5">0</td>
                             </tr>
-                            <tr class="hover:bg-slate-50 staff-row" data-name="Võ Thị Nhanh">
-                                <td class="px-3 py-2 font-bold text-slate-900 border-r border-slate-200">4. Võ Thị Nhanh</td>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-3 py-2 font-bold text-slate-900 border-r border-slate-200 truncate">4. Võ Thị Nhanh</td>
                                 <td class="p-1 border-r border-slate-200 bg-blue-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-blue-700 focus:outline-none focus:border-blue-600 p-0.5 input-t1"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-blue-700 focus:outline-none p-0.5 input-t1"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t1">0</td>
                                 <td class="p-1 border-r border-slate-200 bg-emerald-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-emerald-700 focus:outline-none focus:border-emerald-600 p-0.5 input-t2"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-emerald-700 focus:outline-none p-0.5 input-t2"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t2">0</td>
                                 <td class="p-1 border-r border-slate-200 bg-amber-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-amber-700 focus:outline-none focus:border-amber-600 p-0.5 input-t3"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-amber-700 focus:outline-none p-0.5 input-t3"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t3">0</td>
                                 <td class="p-1 border-r border-slate-200 bg-indigo-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-indigo-700 focus:outline-none focus:border-indigo-600 p-0.5 input-t4"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-indigo-700 focus:outline-none p-0.5 input-t4"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t4">0</td>
-                                <td class="p-1 border-r border-slate-200 bg-slate-50 text-center text-slate-400">0%</td>
-                                <td class="px-2 py-2 text-right font-mono text-slate-400 italic bg-slate-50/50">-</td>
+                                <td class="p-1 border-r border-slate-200 bg-purple-50/30 text-center">
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-purple-700 focus:outline-none p-0.5 input-t5"> %
+                                </td>
+                                <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t5">0</td>
                             </tr>
-                            <tr class="hover:bg-slate-50 staff-row" data-name="Nguyễn Lê Tiểu Quyên">
-                                <td class="px-3 py-2 font-bold text-slate-900 border-r border-slate-200">5. Nguyễn Lê Tiểu Quyên</td>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-3 py-2 font-bold text-slate-900 border-r border-slate-200 truncate">5. Nguyễn Lê Tiểu Quyên</td>
                                 <td class="p-1 border-r border-slate-200 bg-blue-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-blue-700 focus:outline-none focus:border-blue-600 p-0.5 input-t1"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-blue-700 focus:outline-none p-0.5 input-t1"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t1">0</td>
                                 <td class="p-1 border-r border-slate-200 bg-emerald-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-emerald-700 focus:outline-none focus:border-emerald-600 p-0.5 input-t2"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-emerald-700 focus:outline-none p-0.5 input-t2"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t2">0</td>
                                 <td class="p-1 border-r border-slate-200 bg-amber-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-amber-700 focus:outline-none focus:border-amber-600 p-0.5 input-t3"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-amber-700 focus:outline-none p-0.5 input-t3"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t3">0</td>
                                 <td class="p-1 border-r border-slate-200 bg-indigo-50/30 text-center">
-                                    <input type="number" value="20" oninput="calculateShare()" class="w-11 text-center bg-white border border-slate-300 rounded font-bold font-mono text-indigo-700 focus:outline-none focus:border-indigo-600 p-0.5 input-t4"> %
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-indigo-700 focus:outline-none p-0.5 input-t4"> %
                                 </td>
                                 <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t4">0</td>
-                                <td class="p-1 border-r border-slate-200 bg-slate-50 text-center text-slate-400">0%</td>
-                                <td class="px-2 py-2 text-right font-mono text-slate-400 italic bg-slate-50/50">-</td>
+                                <td class="p-1 border-r border-slate-200 bg-purple-50/30 text-center">
+                                    <input type="number" value="20" oninput="calculateShare()" class="w-10 text-center bg-white border border-slate-300 rounded font-bold font-mono text-purple-700 focus:outline-none p-0.5 input-t5"> %
+                                </td>
+                                <td class="px-2 py-2 text-right font-mono text-slate-800 border-r border-slate-200 font-bold amount-t5">0</td>
                             </tr>
                             
                             <tr class="bg-slate-100 font-black text-slate-900 text-center">
@@ -328,8 +397,8 @@
                                 <td class="px-2 py-2 text-right font-mono border-r border-slate-200 bg-amber-100/30 text-amber-950 font-black" id="total-amt-t3">0</td>
                                 <td id="total-pct-t4" class="px-1 py-2 border-r border-slate-200 text-indigo-900">100%</td>
                                 <td class="px-2 py-2 text-right font-mono border-r border-slate-200 bg-indigo-100/30 text-indigo-950 font-black" id="total-amt-t4">0</td>
-                                <td class="px-1 py-2 border-r border-slate-200 text-slate-400">0%</td>
-                                <td class="px-2 py-2 text-right font-mono bg-slate-100 text-slate-400 italic">Chờ số</td>
+                                <td id="total-pct-t5" class="px-1 py-2 border-r border-slate-200 text-purple-900">100%</td>
+                                <td class="px-2 py-2 text-right font-mono bg-purple-100/30 text-purple-950 font-black" id="total-amt-t5">0</td>
                             </tr>
                         </tbody>
                     </table>
@@ -340,16 +409,7 @@
     </div>
 
     <script>
-        const funds = { t1: 100663665, t2: 75226774, t3: 80435800, t4: 64873546 };
-        
-        // Danh sách nhân sự cố định
-        const staffList = [
-            "Nguyễn Minh Thanh",
-            "Đoàn Hiền",
-            "Võ Thị Nhất",
-            "Võ Thị Nhanh",
-            "Nguyễn Lê Tiểu Quyên"
-        ];
+        const funds = { t1: 100663665, t2: 75226774, t3: 80435800, t4: 64873546, t5: 54159355 };
 
         const monthlyData = {
             "1": { name: "Tháng 1", totalProd: "815.196.595", totalDeliveryFund: "56.041.492", obProfit: "38.295.317", bonusFinal: "100.663.665", details: [
@@ -361,122 +421,61 @@
                 { label: "Tổng quỹ bàn giao", value: "56.041.492", style: "font-bold text-emerald-700 bg-emerald-50/40" },
                 { label: "• Lương Nhân sự bàn giao cố định theo định biên", value: "21.000.000", style: "pl-6 text-slate-600" },
                 { label: "• KPI nhân viên bàn giao", value: "25.865.244", style: "pl-6 text-slate-600" },
-                { label: "• KPI trả cho nhân viên phụ bàn giao", value: "0", style: "pl-6 text-slate-600" },
                 { label: "Tổng chi phí bàn giao", value: "46.865.244", style: "font-semibold text-slate-700" },
                 { label: "3. Lãi/ Lỗ VAS", value: "12.432.270", style: "font-bold text-blue-600 bg-blue-50/30" },
-                { label: "• Doanh số VAS theo hệ thống", value: "101.514.820", style: "pl-6 text-slate-600" },
-                { label: "• KPI VAS cho nhân viên", value: "60.332.550", style: "pl-6 text-slate-600" },
-                { label: "• Chi phí thời vụ VAS", value: "28.750.000", style: "pl-6 text-slate-600" },
                 { label: "4. Lãi/Lỗ năng suất thời vụ thuê ngoài OB", value: "38.295.317", style: "font-bold text-amber-600 bg-amber-50/30" },
-                { label: "• Doanh số thời vụ theo chính sách KPI tiêu chuẩn", value: "60.501.480", style: "pl-6 text-slate-600" },
-                { label: "• Phí quản lý thời vụ (80% Doanh số)", value: "48.401.184", style: "pl-6 text-slate-600" },
-                { label: "Tổng ngân sách thời vụ OB", value: "108.902.664", style: "font-semibold" },
-                { label: "• Chi phí thời vụ OB (Theo đơn giá tiêu chuẩn)", value: "70.607.347", style: "pl-6 text-slate-600" },
-                { label: "Lãi/ Lỗ thuê ngoài", value: "38.295.317", style: "pl-6 text-slate-600" },
-                { label: "5. Các khoản giảm trừ chỉ tiêu cam kết chất lượng", value: "0", style: "font-semibold text-red-600" },
                 { label: "Tổng bonus theo tháng", value: "100.663.665", style: "font-black bg-yellow-100 text-yellow-950 text-sm" }
             ]},
             "2": { name: "Tháng 2", totalProd: "607.723.336", totalDeliveryFund: "47.386.612", obProfit: "39.330.115", bonusFinal: "75.226.774", details: [
                 { label: "Tổng sản lượng", value: "607.723.336", style: "font-bold bg-slate-50 text-blue-955" },
                 { label: "1. Doanh số sản lượng (5%)", value: "30.386.167", style: "font-semibold text-slate-900" },
-                { label: "2. Quỹ bàn giao", value: "4.442.572", style: "font-semibold text-slate-900" },
-                { label: "• Doanh số bàn giao (120đ/ point)", value: "43.741.488", style: "pl-6 text-slate-500 italic text-[11px]" },
-                { label: "• Quản lý bàn giao (10đ/ Point)", value: "3.645.124", style: "pl-6 text-slate-500 italic text-[11px]" },
                 { label: "Tổng quỹ bàn giao", value: "47.386.612", style: "font-bold text-emerald-700 bg-emerald-50/40" },
-                { label: "• Lương Nhân sự bàn giao cố định theo định biên", value: "21.000.000", style: "pl-6 text-slate-600" },
-                { label: "• KPI nhân viên bàn giao", value: "21.944.040", style: "pl-6 text-slate-600" },
-                { label: "• KPI trả cho nhân viên phụ bàn giao", value: "0", style: "pl-6 text-slate-600" },
-                { label: "Tổng chi phí bàn giao", value: "42.944.040", style: "font-semibold text-slate-700" },
                 { label: "3. Lãi/ Lỗ VAS", value: "1.067.920", style: "font-bold text-blue-600 bg-blue-50/30" },
-                { label: "• Doanh số VAS theo hệ thống", value: "54.089.640", style: "pl-6 text-slate-600" },
-                { label: "• KPI VAS cho nhân viên", value: "31.302.920", style: "pl-6 text-slate-600" },
-                { label: "• Chi phí thời vụ VAS", value: "21.718.800", style: "pl-6 text-slate-600" },
                 { label: "4. Lãi/Lỗ năng suất thời vụ thuê ngoài OB", value: "39.330.115", style: "font-bold text-amber-600 bg-amber-50/30" },
-                { label: "• Doanh số thời vụ theo chính sách KPI tiêu chuẩn", value: "69.865.200", style: "pl-6 text-slate-600" },
-                { label: "• Phí quản lý thời vụ (80% Doanh số)", value: "55.892.160", style: "pl-6 text-slate-600" },
-                { label: "Tổng ngân sách thời vụ OB", value: "125.757.360", style: "font-semibold" },
-                { label: "• Chi phí thời vụ OB (Theo đơn giá tiêu chuẩn)", value: "86.427.245", style: "pl-6 text-slate-600" },
-                { label: "Lãi/ Lỗ thuê ngoài", value: "39.330.115", style: "pl-6 text-slate-600" },
-                { label: "5. Các khoản giảm trừ chỉ tiêu cam kết chất lượng", value: "0", style: "font-semibold text-red-600" },
                 { label: "Tổng bonus theo tháng", value: "75.226.774", style: "font-black bg-yellow-100 text-yellow-950 text-sm" }
             ]},
             "3": { name: "Tháng 3", totalProd: "837.419.385", totalDeliveryFund: "56.162.171", obProfit: "39.596.098", bonusFinal: "80.435.800", details: [
                 { label: "Tổng sản lượng", value: "837.419.385", style: "font-bold bg-slate-50 text-blue-955" },
                 { label: "1. Doanh số sản lượng (5%)", value: "41.870.969", style: "font-semibold text-slate-900" },
-                { label: "2. Quỹ bàn giao", value: "9.130.823", style: "font-semibold text-slate-900" },
-                { label: "• Doanh số bàn giao (120đ/ point)", value: "51.842.004", style: "pl-6 text-slate-500 italic text-[11px]" },
-                { label: "• Quản lý bàn giao (10đ/ Point)", value: "4.320.167", style: "pl-6 text-slate-500 italic text-[11px]" },
                 { label: "Tổng quỹ bàn giao", value: "56.162.171", style: "font-bold text-emerald-700 bg-emerald-50/40" },
-                { label: "• Lương Nhân sự bàn giao cố định theo định biên", value: "21.000.000", style: "pl-6 text-slate-600" },
-                { label: "• KPI nhân viên bàn giao", value: "25.804.368", style: "pl-6 text-slate-600" },
-                { label: "• KPI trả cho nhân viên phụ bàn giao", value: "226.980", style: "pl-6 text-slate-600" },
-                { label: "Tổng chi phí bàn giao", value: "47.031.348", style: "font-semibold text-slate-700" },
                 { label: "3. Lãi/ Lỗ VAS", value: "(10.162.090)", style: "font-bold text-red-600 bg-red-50" },
-                { label: "• Doanh số VAS theo hệ thống", value: "199.359.100", style: "pl-6 text-slate-600" },
-                { label: "• KPI VAS cho nhân viên", value: "108.846.770", style: "pl-6 text-slate-600" },
-                { label: "• Chi phí thời vụ VAS", value: "100.674.420", style: "pl-6 text-slate-600" },
                 { label: "4. Lãi/Lỗ năng suất thời vụ thuê ngoài OB", value: "39.596.098", style: "font-bold text-amber-600 bg-amber-50/30" },
-                { label: "• Doanh số thời vụ theo chính sách KPI tiêu chuẩn", value: "79.303.080", style: "pl-6 text-slate-600" },
-                { label: "• Phí quản lý thời vụ (80% Doanh số)", value: "63.442.464", style: "pl-6 text-slate-600" },
-                { label: "Tổng ngân sách thời vụ OB", value: "142.745.544", style: "font-semibold" },
-                { label: "• Chi phí thời vụ OB (Theo đơn giá tiêu chuẩn)", value: "103.149.446", style: "pl-6 text-slate-600" },
-                { label: "Lãi/ Lỗ thuê ngoài", value: "39.596.098", style: "pl-6 text-slate-600" },
-                { label: "5. Các khoản giảm trừ chỉ tiêu cam kết chất lượng", value: "0", style: "font-semibold text-red-600" },
                 { label: "Tổng bonus theo tháng", value: "80.435.800", style: "font-black bg-yellow-100 text-yellow-950 text-sm" }
             ]},
             "4": { name: "Tháng 4", totalProd: "Chờ cập nhật", totalDeliveryFund: "Chờ cập nhật", obProfit: "20.274.638", bonusFinal: "64.873.546", details: [
-                { label: "Tổng sản lượng", value: "Chờ cập nhật (Ảnh khuất)", style: "font-bold bg-slate-100 text-slate-400" },
-                { label: "Tổng chi phí bàn giao", value: "41.706.444", style: "font-semibold text-slate-700" },
+                { label: "Tổng sản lượng", value: "Chờ cập nhật", style: "font-bold bg-slate-100 text-slate-400" },
                 { label: "3. Lãi/ Lỗ VAS", value: "10.501.160", style: "font-bold text-blue-600 bg-blue-50/30" },
-                { label: "• Doanh số VAS theo hệ thống", value: "161.260.370", style: "pl-6 text-slate-600" },
-                { label: "• KPI VAS cho nhân viên", value: "98.549.760", style: "pl-6 text-slate-600" },
-                { label: "• Chi phí thời vụ VAS", value: "52.209.450", style: "pl-6 text-slate-600" },
                 { label: "4. Lãi/Lỗ năng suất thời vụ thuê ngoài OB", value: "20.274.638", style: "font-bold text-amber-600 bg-amber-50/30" },
-                { label: "• Doanh số thời vụ theo chính sách KPI tiêu chuẩn", value: "39.010.680", style: "pl-6 text-slate-600" },
-                { label: "• Phí quản lý thời vụ (80% Doanh số)", value: "31.208.544", style: "pl-6 text-slate-600" },
-                { label: "Tổng ngân sách thời vụ OB", value: "70.219.224", style: "font-semibold" },
-                { label: "• Chi phí thời vụ OB (Theo đơn giá tiêu chuẩn)", value: "49.944.586", style: "pl-6 text-slate-600" },
-                { label: "Lãi/ Lỗ thuê ngoài", value: "20.274.638", style: "pl-6 text-slate-600" },
-                { label: "5. Các khoản giảm trừ chỉ tiêu cam kết chất lượng", value: "0", style: "font-semibold text-red-600" },
                 { label: "Tổng bonus theo tháng", value: "64.873.546", style: "font-black bg-yellow-100 text-yellow-950 text-sm" }
             ]},
-            "5": { name: "Tháng 5", totalProd: "Chưa có số", totalDeliveryFund: "Chưa có số", obProfit: "Chưa có số", bonusFinal: "Chưa có số", details: [
-                { label: "Dữ liệu báo cáo Tháng 5 hiện chưa có số liệu nghiệm thu", value: "-", style: "text-center italic text-slate-400 py-4" }
+            "5": { name: "Tháng 5", totalProd: "620.403.400", totalDeliveryFund: "7.306.055", obProfit: "13.314.240", bonusFinal: "54.159.355", details: [
+                { label: "5% KPI Kho", value: "31.020.170", style: "font-semibold text-slate-900" },
+                { label: "KPI bàn giao", value: "7.306.055", style: "font-semibold text-slate-900" },
+                { label: "VAS", value: "2.518.890", style: "font-semibold text-slate-900" },
+                { label: "Lại/ lỗ TV (Thuê ngoài OB)", value: "13.314.240", style: "font-bold text-amber-600 bg-amber-50/30" },
+                { label: "TỔNG QUỸ BONUS", value: "54.159.355", style: "font-black bg-yellow-100 text-purple-950 text-sm" }
             ]}
         };
 
+        // Hàm chuyển Tab nguyên bản 100% của bạn
         function switchTab(tabName) {
-            const tabCompareContent = document.getElementById("tab-compare-content");
-            const tabDetailContent = document.getElementById("tab-detail-content");
-            const tabShareContent = document.getElementById("tab-share-content");
+            document.getElementById("tab-compare-content").classList.add("hidden");
+            document.getElementById("tab-detail-content").classList.add("hidden");
+            document.getElementById("tab-share-content").classList.add("hidden");
             
-            const btnCompare = document.getElementById("btn-compare");
-            const btnDetail = document.getElementById("btn-detail");
-            const btnShare = document.getElementById("btn-share");
+            document.getElementById("btn-compare").className = "px-2.5 py-1.5 rounded-md font-bold text-xs transition-all duration-200 text-slate-700 hover:text-blue-900 cursor-pointer";
+            document.getElementById("btn-detail").className = "px-2.5 py-1.5 rounded-md font-bold text-xs transition-all duration-200 text-slate-700 hover:text-blue-900 cursor-pointer";
+            document.getElementById("btn-share").className = "px-2.5 py-1.5 rounded-md font-bold text-xs transition-all duration-200 text-slate-700 hover:text-blue-900 cursor-pointer";
 
-            tabCompareContent.classList.add("hidden");
-            tabDetailContent.classList.add("hidden");
-            tabShareContent.classList.add("hidden");
-
-            const normalClass = "px-2.5 py-1.5 rounded-md font-bold text-xs transition-all duration-200 text-slate-700 hover:text-blue-900 cursor-pointer";
-            const activeClass = "px-2.5 py-1.5 rounded-md font-bold text-xs transition-all duration-200 bg-blue-900 text-white shadow-sm cursor-pointer";
-            
-            btnCompare.className = normalClass;
-            btnDetail.className = normalClass;
-            btnShare.className = normalClass;
-
-            if (tabName === "compare") {
-                tabCompareContent.classList.remove("hidden");
-                btnCompare.className = activeClass;
-                renderCompareStaffTable(); // Cập nhật lại số liệu bảng tổng hợp khi mở Tab 1
-            } else if (tabName === "detail") {
-                tabDetailContent.classList.remove("hidden");
-                btnDetail.className = activeClass;
-                updateMonthData();
-            } else if (tabName === "share") {
-                tabShareContent.classList.remove("hidden");
-                btnShare.className = activeClass;
-                calculateShare();
+            if (tabName === 'compare') {
+                document.getElementById("tab-compare-content").classList.remove("hidden");
+                document.getElementById("btn-compare").className = "px-2.5 py-1.5 rounded-md font-bold text-xs transition-all duration-200 bg-blue-900 text-white shadow-sm cursor-pointer";
+            } else if (tabName === 'detail') {
+                document.getElementById("tab-detail-content").classList.remove("hidden");
+                document.getElementById("btn-detail").className = "px-2.5 py-1.5 rounded-md font-bold text-xs transition-all duration-200 bg-blue-900 text-white shadow-sm cursor-pointer";
+            } else if (tabName === 'share') {
+                document.getElementById("tab-share-content").classList.remove("hidden");
+                document.getElementById("btn-share").className = "px-2.5 py-1.5 rounded-md font-bold text-xs transition-all duration-200 bg-blue-900 text-white shadow-sm cursor-pointer";
             }
         }
 
@@ -484,18 +483,12 @@
             return Math.round(number).toLocaleString('vi-VN');
         }
 
-        // Tạo cấu trúc dữ liệu lưu kết quả tạm tính để chia sẻ giữa các Tab
-        let calculatedStaffBonus = {};
-
+        // Hàm tính toán và cập nhật đồng thời số tiền lên cả Tab 3 và Tab 1
         function calculateShare() {
-            const months = ['t1', 't2', 't3', 't4'];
-            
-            // Khởi tạo/Đặt lại cấu trúc lưu trữ
-            staffList.forEach(name => {
-                calculatedStaffBonus[name] = { t1: 0, t2: 0, t3: 0, t4: 0, total: 0 };
-            });
+            const months = ['t1', 't2', 't3', 't4', 't5'];
+            let personalTotals = [0, 0, 0, 0, 0]; // Lưu tổng cộng 5 người
 
-            months.forEach((m, mIndex) => {
+            months.forEach(m => {
                 const inputs = document.querySelectorAll(`.input-${m}`);
                 const amounts = document.querySelectorAll(`.amount-${m}`);
                 let totalPct = 0;
@@ -509,77 +502,41 @@
                     const calculatedAmount = (fund * pct) / 100;
                     totalAmt += calculatedAmount;
 
+                    // Cập nhật số tiền tại Tab 3 (Bảng chia tỉ lệ)
                     amounts[index].innerText = formatCurrency(calculatedAmount);
                     
-                    // Lưu giá trị tính toán được theo từng nhân sự
-                    const staffName = staffList[index];
-                    if (calculatedStaffBonus[staffName]) {
-                        calculatedStaffBonus[staffName][m] = calculatedAmount;
+                    // Cập nhật trực tiếp số tiền sang Tab 1 (Bảng tổng hợp cá nhân)
+                    const tab1Cell = document.getElementById(`tab1-p${index}-${m}`);
+                    if (tab1Cell) {
+                        tab1Cell.innerText = formatCurrency(calculatedAmount);
                     }
+
+                    // Cộng dồn tổng các tháng của nhân sự này
+                    personalTotals[index] += calculatedAmount;
                 });
 
+                // Cập nhật dòng tổng % ở dưới chân bảng Tab 3
                 const pctLabel = document.getElementById(`total-pct-${m}`);
-                pctLabel.innerText = `${totalPct}%`;
-                
-                if (totalPct === 100) {
-                    pctLabel.className = "px-1 py-2 border-r border-slate-200 text-emerald-600 font-black";
-                } else {
-                    pctLabel.className = "px-1 py-2 border-r border-slate-200 text-red-600 font-black";
+                if (pctLabel) {
+                    pctLabel.innerText = `${totalPct}%`;
+                    pctLabel.className = totalPct === 100 
+                        ? "px-1 py-2 border-r border-slate-200 text-emerald-600 font-black" 
+                        : "px-1 py-2 border-r border-slate-200 text-red-600 font-black";
                 }
 
-                document.getElementById(`total-amt-${m}`).innerText = formatCurrency(totalAmt);
+                const amtLabel = document.getElementById(`total-amt-${m}`);
+                if (amtLabel) {
+                    amtLabel.innerText = formatCurrency(totalAmt);
+                }
             });
 
-            // Tính tổng tất cả các tháng của từng người
-            staffList.forEach(name => {
-                calculatedStaffBonus[name].total = 
-                    calculatedStaffBonus[name].t1 + 
-                    calculatedStaffBonus[name].t2 + 
-                    calculatedStaffBonus[name].t3 + 
-                    calculatedStaffBonus[name].t4;
+            // Sau khi tính xong xuôi, ghi số "Tổng Các Tháng" của từng người lên Tab 1
+            personalTotals.forEach((total, index) => {
+                const totalCell = document.getElementById(`tab1-p${index}-total`);
+                if (totalCell) {
+                    totalCell.innerText = formatCurrency(total);
+                }
             });
-
-            // Luôn đồng bộ render lại bảng thống kê ở Tab 1
-            renderCompareStaffTable();
-        }
-
-        // Hàm sinh và hiển thị dữ liệu bảng so sánh tại Tab 1
-        function renderCompareStaffTable() {
-            const tbody = document.getElementById("compare-staff-body");
-            if (!tbody) return;
-            
-            tbody.innerHTML = "";
-            
-            staffList.forEach((name, index) => {
-                const data = calculatedStaffBonus[name] || { t1: 0, t2: 0, t3: 0, t4: 0, total: 0 };
-                const row = document.createElement("tr");
-                row.className = "hover:bg-slate-50 text-center";
-                row.innerHTML = `
-                    <td class="px-3 py-2 font-bold text-slate-900 text-left">${index + 1}. ${name}</td>
-                    <td class="px-2 py-2 font-mono font-semibold text-blue-700">${formatCurrency(data.t1)}</td>
-                    <td class="px-2 py-2 font-mono font-semibold text-emerald-700">${formatCurrency(data.t2)}</td>
-                    <td class="px-2 py-2 font-mono font-semibold text-amber-700">${formatCurrency(data.t3)}</td>
-                    <td class="px-2 py-2 font-mono font-semibold text-indigo-700">${formatCurrency(data.t4)}</td>
-                    <td class="px-2 py-2 font-mono text-slate-400 italic bg-slate-50/40">-</td>
-                    <td class="px-3 py-2 font-mono font-black text-blue-950 bg-blue-50/50 text-right text-[13px]">${formatCurrency(data.total)}</td>
-                `;
-                tbody.appendChild(row);
-            });
-
-            // Thêm dòng Tổng cộng Quỹ thưởng ở cuối bảng Tab 1 để đối chiếu
-            const totalRow = document.createElement("tr");
-            totalRow.className = "bg-slate-100 font-black text-slate-900 text-center border-t border-slate-300";
-            const sumTotalFunds = funds.t1 + funds.t2 + funds.t3 + funds.t4;
-            totalRow.innerHTML = `
-                <td class="px-3 py-2.5 text-left uppercase text-[10px] tracking-wider">📊 Tổng Quỹ Trực Thuộc (100%)</td>
-                <td class="px-2 py-2.5 font-mono text-blue-800">${formatCurrency(funds.t1)}</td>
-                <td class="px-2 py-2.5 font-mono text-emerald-800">${formatCurrency(funds.t2)}</td>
-                <td class="px-2 py-2.5 font-mono text-amber-800">${formatCurrency(funds.t3)}</td>
-                <td class="px-2 py-2.5 font-mono text-indigo-800">${formatCurrency(funds.t4)}</td>
-                <td class="px-2 py-2.5 font-mono text-slate-400 italic">Chờ số</td>
-                <td class="px-3 py-2.5 font-mono text-right text-blue-900 bg-blue-100/50 text-sm">${formatCurrency(sumTotalFunds)}</td>
-            `;
-            tbody.appendChild(totalRow);
         }
 
         function updateMonthData() {
@@ -608,8 +565,8 @@
         }
 
         window.onload = function() {
-            calculateShare(); // Sẽ tự động gọi tính toán và render cả 2 bảng
             updateMonthData();
+            calculateShare();
         };
     </script>
 </body>
